@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-10-24T09:50-04:00",
- "note": "stale if generated_at is older than stale_after_sec",
+ "generated_at": "2026-10-24T09:51-04:00",
+ "note": "files are republished on any change and at least every 6 h; stale if generated_at is older than stale_after_sec",
  "ok": true,
- "stale_after_sec": 1800,
+ "stale_after_sec": 28800,
  "version": 1
 }
