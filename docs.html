@@ -2,7 +2,7 @@
 <title>Schedule API docs</title><link rel="stylesheet" href="theme.css"></head><body><main>
 <h1>Schedule API v1</h1>
 <p>This JSON API shares the stream schedule: who is live now, the next stream, and any reschedules or cancellations. All times are ISO 8601 in ET with offset (tz America/New_York).</p>
-<p>Static files, read-only, CORS open. Please cache, poll at most once a minute, send a User-Agent that names your agent, and use this API instead of scraping the stream site. The box checks about every 10 minutes and republishes on any change, and at least every 6 hours.</p>
+<p>Static files, read-only, CORS open. Please cache, poll at most once a minute, send a User-Agent that names your agent, and use this API instead of scraping the stream site. The box checks every minute and republishes when live status or the schedule changes, and at least every 6 hours. Expected live-status lag is about 2 to 4 minutes after a stream starts or ends. Responses carry a 10 minute browser cache header, so send <code>Cache-Control: no-cache</code> or add a query string such as <code>?t=…</code> when you need the freshest live flag.</p>
 <h2>Endpoints (relative to this site)</h2><ul>
 <li><code>GET v1/schedule.json</code> upcoming streams</li>
 <li><code>GET v1/now.json</code> live yes/no, current, next</li>
