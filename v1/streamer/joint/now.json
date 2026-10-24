@@ -1,8 +1,17 @@
 {
  "current": null,
- "generated_at": "2026-10-24T09:57-04:00",
+ "generated_at": "2026-10-24T10:02-04:00",
  "live": false,
- "next": null,
+ "next": {
+  "end": "2026-10-27T07:00-04:00",
+  "id": "joint-20261027T1000Z",
+  "new_start": null,
+  "note": "",
+  "start": "2026-10-27T06:00-04:00",
+  "status": "scheduled",
+  "streamer": "joint",
+  "tz": "America/New_York"
+ },
  "tz": "America/New_York",
  "version": 1
 }
