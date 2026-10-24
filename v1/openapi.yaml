@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Marcus Stream Schedule API
+  version: "1"
+  description: >-
+    This JSON API shares the stream schedule: who is live now, the next stream,
+    and any reschedules or cancellations. All times are ISO 8601 in ET with offset
+    (tz America/New_York). Read-only, public schedule data only. Responses are cached
+    60 s; poll at most once a minute and send a User-Agent that names your agent.
+servers: [{url: ./}]
+# Static hosting: query filters are ignored; use v1/streamer/{marcus|alex|joint}/*.json
+components:
+  parameters:
+    streamer: {name: streamer, in: query, schema: {type: string, enum: [marcus, alex, joint]}}
+    status: {name: status, in: query, schema: {type: string, enum: [scheduled, live, moved, cancelled]}}
+    limit: {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 100}}
+  schemas:
+    Item:
+      type: object
+      required: [id, streamer, start, end, tz, status]
+      properties:
+        id: {type: string, example: marcus-20261025T0900Z}
+        streamer: {type: string, enum: [marcus, alex, joint]}
+        start: {type: string, format: date-time, example: "2026-10-25T05:00-04:00"}
+        end: {type: string, format: date-time}
+        tz: {type: string, example: America/New_York}
+        status: {type: string, enum: [scheduled, live, moved, cancelled]}
+        new_start: {type: string, format: date-time, nullable: true}
+        note: {type: string, maxLength: 140}
+    Error:
+      type: object
+      properties:
+        error: {type: object, properties: {code: {type: string}, status: {type: integer}, message: {type: string}}}
+paths:
+  /v1/schedule.json:
+    get:
+      summary: Upcoming streams
+      parameters: [{$ref: '#/components/parameters/streamer'}, {$ref: '#/components/parameters/status'}, {$ref: '#/components/parameters/limit'}]
+      responses:
+        "200": {description: OK}
+        "400": {description: Bad parameter, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        "503": {description: No data yet}
+  /v1/now.json:
+    get: {summary: Live yes/no plus current and next stream, parameters: [{$ref: '#/components/parameters/streamer'}], responses: {"200": {description: OK}}}
+  /v1/changes.json:
+    get: {summary: Rescheduled and cancelled streams, parameters: [{$ref: '#/components/parameters/streamer'}], responses: {"200": {description: OK}}}
+  /v1/schedule.ics:
+    get: {summary: iCalendar feed, parameters: [{$ref: '#/components/parameters/streamer'}], responses: {"200": {description: text/calendar}}}
+  /v1/health.json:
+    get: {summary: Health and data age, responses: {"200": {description: fresh}, "503": {description: stale or missing}}}
+  /v1/streamer/{streamer}/schedule.json:
+    get:
+      summary: Upcoming streams for one streamer (also now.json, changes.json, schedule.ics)
+      parameters: [{name: streamer, in: path, required: true, schema: {type: string, enum: [marcus, alex, joint]}}]
+      responses: {"200": {description: OK}, "404": {description: Unknown streamer}}

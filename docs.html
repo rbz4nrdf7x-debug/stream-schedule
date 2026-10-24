@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Schedule API docs</title><link rel="stylesheet" href="theme.css"></head><body><main>
+<h1>Schedule API v1</h1>
+<p>This JSON API shares the stream schedule: who is live now, the next stream, and any reschedules or cancellations. All times are ISO 8601 in ET with offset (tz America/New_York).</p>
+<p>Static files, read-only, CORS open. Please cache, poll at most once a minute, send a User-Agent that names your agent, and use this API instead of scraping the stream site. Data refreshes about every 10 minutes.</p>
+<h2>Endpoints (relative to this site)</h2><ul>
+<li><code>GET v1/schedule.json</code> upcoming streams</li>
+<li><code>GET v1/now.json</code> live yes/no, current, next</li>
+<li><code>GET v1/changes.json</code> rescheduled (status moved, see new_start) and cancelled</li>
+<li><code>GET v1/schedule.ics</code> calendar feed</li>
+<li><code>GET v1/health.json</code> treat as stale if generated_at is older than stale_after_sec</li>
+<li><code>GET v1/openapi.yaml</code> OpenAPI 3 spec</li></ul>
+<h2>Per streamer</h2><p>Query filters do not work on static hosting. Use precomputed files:
+<code>v1/streamer/{marcus|alex|joint}/schedule.json</code>, <code>now.json</code>, <code>changes.json</code>, <code>schedule.ics</code>.
+Unknown paths return HTTP 404.</p>
+<h2>Item</h2><pre>{"id":"marcus-20261025T0900Z","streamer":"marcus","start":"2026-10-25T05:00-04:00",
+ "end":"2026-10-25T06:00-04:00","tz":"America/New_York","status":"scheduled","new_start":null,"note":""}</pre>
+<p>Status: scheduled, live, moved, cancelled. Streamer: marcus, alex, joint (Marcus &amp; Alex).</p>
+<p><a href="./">Back to schedule</a></p></main></body></html>

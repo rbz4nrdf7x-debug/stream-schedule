@@ -1,0 +1,17 @@
+{
+ "current": null,
+ "generated_at": "2026-10-24T09:50-04:00",
+ "live": false,
+ "next": {
+  "end": "2026-10-25T06:00-04:00",
+  "id": "marcus-20261025T0900Z",
+  "new_start": null,
+  "note": "",
+  "start": "2026-10-25T05:00-04:00",
+  "status": "scheduled",
+  "streamer": "marcus",
+  "tz": "America/New_York"
+ },
+ "tz": "America/New_York",
+ "version": 1
+}

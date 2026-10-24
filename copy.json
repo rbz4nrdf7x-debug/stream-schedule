@@ -1,0 +1,15 @@
+{
+  "_source": "copy v1",
+  "title": "Marcus Stream Schedule",
+  "tagline": "When Marcus is live, when he's next on, and any changes, in one place.",
+  "intro": "This is the stream schedule for marcus_paradise. Check when Marcus is live, when the next stream starts, and whether anything moved. All times are ET.",
+  "labels": {"live": "Marcus is live", "next": "Next stream", "moved": "Rescheduled", "cancelled": "Cancelled", "tz": "All times ET",
+             "streamer": {"marcus": "Marcus", "alex": "Alex", "joint": "Marcus & Alex"}},
+  "notice": "Clocks go back Sun 1 Nov.",
+  "notice_until": "2026-11-02",
+  "empty": "No streams on the schedule right now. Check back soon, new times go up here first.",
+  "moved_tpl": "Schedule change: the {old_day} {old_time_et} ET stream is rescheduled to {new_day} {new_time_et} ET.",
+  "cancelled_tpl": "Schedule change: the {day} {time_et} ET stream is cancelled. The next one is listed above.",
+  "footer": "Schedule by marcus_paradise. Times can change, this page always shows the latest.",
+  "api_line": "Agents: JSON API at /v1, docs at /docs. Please cache and poll at most once a minute."
+}

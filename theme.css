@@ -1,0 +1,11 @@
+/* Theme placeholder: designer replaces this file only. */
+:root{--bg:#0e0f13;--card:#171922;--fg:#f2f2f5;--mute:#9aa0ad;--accent:#ff4f7b;--live:#2fd17a;--warn:#f5b941;--radius:14px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);line-height:1.5}
+main{max-width:720px;margin:0 auto;padding:48px 20px}h1{font-size:2.2rem;margin:0 0 4px;letter-spacing:-.02em}
+.tag{color:var(--accent);margin:0 0 16px}.intro,.mute{color:var(--mute)}
+.notice{background:#2a2412;color:var(--warn);padding:8px 12px;border-radius:8px;margin:16px 0}
+.live{display:inline-block;background:var(--live);color:#04150b;font-weight:700;padding:6px 14px;border-radius:999px;margin:12px 0}
+ul{list-style:none;padding:0}li{background:var(--card);border-radius:var(--radius);padding:14px 18px;margin:10px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.who{font-weight:600}.st{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.st.live{margin:0;padding:2px 10px;font-size:.75rem}.st.moved{color:var(--warn)}.st.cancelled{color:var(--accent)}
+.chg{width:100%;font-size:.9rem;color:var(--mute)}footer{margin-top:40px;font-size:.85rem;color:var(--mute)}a{color:var(--accent)}
