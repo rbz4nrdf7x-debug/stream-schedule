@@ -1,16 +1,6 @@
 {
- "generated_at": "2026-10-25T09:38-04:00",
+ "generated_at": "2026-10-25T11:01-04:00",
  "items": [
-  {
-   "end": "2026-10-25T11:00-04:00",
-   "id": "marcus-20261025T1400Z",
-   "new_start": null,
-   "note": "",
-   "start": "2026-10-25T10:00-04:00",
-   "status": "scheduled",
-   "streamer": "marcus",
-   "tz": "America/New_York"
-  },
   {
    "end": "2026-10-25T13:00-04:00",
    "id": "marcus-20261025T1600Z",
