@@ -1,42 +1,32 @@
 {
- "generated_at": "2026-10-25T09:16-04:00",
+ "generated_at": "2026-10-25T09:19-04:00",
  "items": [
   {
-   "end": "2026-10-25T11:00-04:00",
-   "id": "marcus-20261025T1400Z",
+   "end": "2026-10-25T12:00-04:00",
+   "id": "marcus-20261025T1500Z",
    "new_start": null,
    "note": "",
-   "start": "2026-10-25T10:00-04:00",
+   "start": "2026-10-25T11:00-04:00",
    "status": "scheduled",
    "streamer": "marcus",
    "tz": "America/New_York"
   },
   {
-   "end": "2026-10-25T13:00-04:00",
-   "id": "marcus-20261025T1600Z",
+   "end": "2026-10-25T14:00-04:00",
+   "id": "marcus-20261025T1700Z",
    "new_start": null,
    "note": "",
-   "start": "2026-10-25T12:00-04:00",
+   "start": "2026-10-25T13:00-04:00",
    "status": "scheduled",
    "streamer": "marcus",
    "tz": "America/New_York"
   },
   {
-   "end": "2026-10-25T15:00-04:00",
-   "id": "marcus-20261025T1800Z",
+   "end": "2026-10-25T16:00-04:00",
+   "id": "marcus-20261025T1900Z",
    "new_start": null,
    "note": "",
-   "start": "2026-10-25T14:00-04:00",
-   "status": "scheduled",
-   "streamer": "marcus",
-   "tz": "America/New_York"
-  },
-  {
-   "end": "2026-10-25T17:00-04:00",
-   "id": "marcus-20261025T2000Z",
-   "new_start": null,
-   "note": "",
-   "start": "2026-10-25T16:00-04:00",
+   "start": "2026-10-25T15:00-04:00",
    "status": "scheduled",
    "streamer": "marcus",
    "tz": "America/New_York"
