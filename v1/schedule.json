@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T01:02-04:00",
+ "generated_at": "2026-10-26T03:49-04:00",
  "items": [
   {
    "end": "2026-10-27T06:00-04:00",
@@ -12,16 +12,6 @@
    "tz": "America/New_York"
   },
   {
-   "end": "2026-10-28T02:00-04:00",
-   "id": "marcus-20261028T0500Z",
-   "new_start": null,
-   "note": "",
-   "start": "2026-10-28T01:00-04:00",
-   "status": "scheduled",
-   "streamer": "marcus",
-   "tz": "America/New_York"
-  },
-  {
    "end": "2026-10-28T06:00-04:00",
    "id": "alex-20261028T0900Z",
    "new_start": null,
@@ -29,6 +19,16 @@
    "start": "2026-10-28T05:00-04:00",
    "status": "scheduled",
    "streamer": "alex",
+   "tz": "America/New_York"
+  },
+  {
+   "end": "2026-10-29T02:00-04:00",
+   "id": "marcus-20261029T0500Z",
+   "new_start": null,
+   "note": "",
+   "start": "2026-10-29T01:00-04:00",
+   "status": "scheduled",
+   "streamer": "marcus",
    "tz": "America/New_York"
   },
   {
