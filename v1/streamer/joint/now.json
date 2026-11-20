@@ -1,8 +1,17 @@
 {
  "current": null,
- "generated_at": "2026-11-06T17:40-05:00",
+ "generated_at": "2026-11-20T04:03-05:00",
  "live": false,
- "next": null,
+ "next": {
+  "end": "2026-11-20T08:00-05:00",
+  "id": "joint-20261120T1200Z",
+  "new_start": null,
+  "note": "",
+  "start": "2026-11-20T07:00-05:00",
+  "status": "scheduled",
+  "streamer": "joint",
+  "tz": "America/New_York"
+ },
  "tz": "America/New_York",
  "version": 1
 }
