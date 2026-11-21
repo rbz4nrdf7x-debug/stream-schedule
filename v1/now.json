@@ -1,15 +1,15 @@
 {
  "current": null,
- "generated_at": "2026-11-21T05:47-05:00",
+ "generated_at": "2026-11-21T08:12-05:00",
  "live": false,
  "next": {
-  "end": "2026-11-21T07:30-05:00",
-  "id": "alex-20261121T1130Z",
+  "end": "2026-11-22T05:00-05:00",
+  "id": "joint-20261122T0900Z",
   "new_start": null,
   "note": "",
-  "start": "2026-11-21T06:30-05:00",
+  "start": "2026-11-22T04:00-05:00",
   "status": "scheduled",
-  "streamer": "alex",
+  "streamer": "joint",
   "tz": "America/New_York"
  },
  "tz": "America/New_York",
