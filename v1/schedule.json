@@ -1,6 +1,16 @@
 {
- "generated_at": "2026-11-28T06:02-05:00",
+ "generated_at": "2026-11-28T07:46-05:00",
  "items": [
+  {
+   "end": "2026-11-28T13:00-05:00",
+   "id": "joint-20261128T1700Z",
+   "new_start": null,
+   "note": "",
+   "start": "2026-11-28T12:00-05:00",
+   "status": "scheduled",
+   "streamer": "joint",
+   "tz": "America/New_York"
+  },
   {
    "end": "2026-11-30T09:00-05:00",
    "id": "joint-20261130T1300Z",
